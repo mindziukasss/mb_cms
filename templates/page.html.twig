@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121845994-1"></script>
+    {% block stylesheets %}
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=latin-ext"
+              rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{{ asset('build/css/backend.css') }}">
+    {% endblock %}
+    <title>{% block title %}Page{% endblock %}</title>
+</head>
+<body>
+
+<div class="container-fluid">
+
+    {% block body %}
+        <h1>Page</h1>
+        <button class="btn btn-success">Page</button>
+    {% endblock %}
+
+    {% block javascripts %}
+        <script src="{{ asset('build/manifest.js') }}"></script>
+        <script src="{{ asset('build/vendor.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('build/js/backend.js') }}"></script>
+    {% endblock %}
+
+</div>
+
+</body>
+</html>
+
